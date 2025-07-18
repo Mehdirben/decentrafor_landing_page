@@ -48,6 +48,13 @@ body {
     color: #6366f1;
 }
 
+.nav-brand .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
 .nav-brand i {
     font-size: 1.8rem;
 }
@@ -578,6 +585,13 @@ body {
     font-weight: 700;
     color: #6366f1;
     margin-bottom: 15px;
+}
+
+.footer-brand .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
 }
 
 .footer-brand i {
