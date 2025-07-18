@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecentraFor - Educational Platform</title>
+    <meta name="description" content="A comprehensive educational platform combining PDF document management with forum discussions for decentralized learning and knowledge sharing.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-network-wired"></i>
+                <span>DecentraFor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Empowering <span class="gradient-text">Decentralized</span> Education
+                </h1>
+                <p class="hero-subtitle">
+                    A comprehensive Flutter application that combines PDF document management with educational forum discussions, designed for decentralized learning and knowledge sharing.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download App
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF Library</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="pdf-item">
+                            <i class="fas fa-book"></i>
+                            <span>Advanced Mathematics</span>
+                        </div>
+                        <div class="pdf-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Chemistry Fundamentals</span>
+                        </div>
+                        <div class="pdf-item">
+                            <i class="fas fa-history"></i>
+                            <span>World History</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="card-header">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum Discussions</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="forum-item">
+                            <div class="forum-avatar"></div>
+                            <div class="forum-text">
+                                <div class="forum-user">Alex Student</div>
+                                <div class="forum-message">Great explanation on quantum physics!</div>
+                            </div>
+                        </div>
+                        <div class="forum-item">
+                            <div class="forum-avatar"></div>
+                            <div class="forum-text">
+                                <div class="forum-user">Maria Teacher</div>
+                                <div class="forum-message">Here's a helpful resource...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>Everything you need for modern educational collaboration</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>PDF Document Store</h3>
+                    <p>Comprehensive library for storing, managing, and accessing educational PDFs with offline viewing capabilities.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Search by title and description</li>
+                        <li><i class="fas fa-check"></i> Filter by category</li>
+                        <li><i class="fas fa-check"></i> Download for offline viewing</li>
+                        <li><i class="fas fa-check"></i> Upload new PDFs</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Educational Forum</h3>
+                    <p>Community-driven discussion platform for knowledge sharing across multiple educational categories.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Category-based organization</li>
+                        <li><i class="fas fa-check"></i> Threaded discussions</li>
+                        <li><i class="fas fa-check"></i> Like system for posts</li>
+                        <li><i class="fas fa-check"></i> Search functionality</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security & Authentication</h3>
+                    <p>Robust security features with row-level security policies and comprehensive user management.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Row Level Security</li>
+                        <li><i class="fas fa-check"></i> Username management</li>
+                        <li><i class="fas fa-check"></i> Access control</li>
+                        <li><i class="fas fa-check"></i> Secure authentication</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Built with Flutter for seamless experience across all platforms with modern Material Design 3.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Android & iOS</li>
+                        <li><i class="fas fa-check"></i> Web & Desktop</li>
+                        <li><i class="fas fa-check"></i> Material Design 3</li>
+                        <li><i class="fas fa-check"></i> Responsive UI</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Offline Capabilities</h3>
+                    <p>Download and manage PDFs for offline viewing with progress tracking and storage management.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Progressive downloads</li>
+                        <li><i class="fas fa-check"></i> Offline PDF viewing</li>
+                        <li><i class="fas fa-check"></i> Download management</li>
+                        <li><i class="fas fa-check"></i> Storage optimization</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educational Categories</h3>
+                    <p>Organized content across multiple educational subjects for structured learning experiences.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Mathematics & Science</li>
+                        <li><i class="fas fa-check"></i> Literature & History</li>
+                        <li><i class="fas fa-check"></i> Technology & Art</li>
+                        <li><i class="fas fa-check"></i> Language Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2>Roadmap</h2>
+                <p>The future of decentralized education</p>
+            </div>
+
+            <div class="roadmap-container">
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Phase 1: Current Features</h3>
+                        <p>PDF document management, educational forum system, user authentication, and offline PDF viewing.</p>
+                        <div class="roadmap-status">Completed</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item current">
+                    <div class="roadmap-marker">
+                        <i class="fas fa-cog fa-spin"></i>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Phase 2: Enhanced Features</h3>
+                        <p>Advanced search and filtering, user profiles and avatars, notification system, and content moderation tools.</p>
+                        <div class="roadmap-status">In Progress</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item future">
+                    <div class="roadmap-marker">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Phase 3: Mesh Network Integration</h3>
+                        <p>Peer-to-peer connectivity, offline synchronization, distributed content sharing, and emergency communication modes.</p>
+                        <div class="roadmap-status">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mesh-network-preview">
+                <h3>🌐 Mesh Network Integration</h3>
+                <p>The next major milestone will transform DecentraFor into a truly decentralized platform:</p>
+                <div class="mesh-features">
+                    <div class="mesh-feature">
+                        <i class="fas fa-wifi"></i>
+                        <span>Offline Mesh Networking</span>
+                    </div>
+                    <div class="mesh-feature">
+                        <i class="fas fa-share-nodes"></i>
+                        <span>Distributed Content Sharing</span>
+                    </div>
+                    <div class="mesh-feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Offline Forum Sync</span>
+                    </div>
+                    <div class="mesh-feature">
+                        <i class="fas fa-database"></i>
+                        <span>Decentralized Storage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specs -->
+    <section id="about" class="tech-specs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Specifications</h2>
+                <p>Built with modern technologies for optimal performance</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Frontend</h3>
+                    <div class="tech-item">
+                        <i class="fab fa-flutter"></i>
+                        <span>Flutter</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Material Design 3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code"></i>
+                        <span>Dart</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <h3>Backend</h3>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>Supabase</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-server"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-cloud"></i>
+                        <span>Real-time Updates</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <h3>Platforms</h3>
+                    <div class="tech-item">
+                        <i class="fab fa-android"></i>
+                        <span>Android</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-apple"></i>
+                        <span>iOS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Web</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-desktop"></i>
+                        <span>Desktop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Education?</h2>
+                <p>Join the decentralized learning revolution and experience the future of educational collaboration.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Download Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-network-wired"></i>
+                        <span>DecentraFor</span>
+                    </div>
+                    <p>Empowering decentralized education and knowledge sharing.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#features">PDF Document Store</a></li>
+                        <li><a href="#features">Educational Forum</a></li>
+                        <li><a href="#features">Offline Capabilities</a></li>
+                        <li><a href="#features">Cross-Platform</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href="#about">Documentation</a></li>
+                        <li><a href="#contact">Support</a></li>
+                        <li><a href="#contact">Contributing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DecentraFor. Open source and available under the MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
