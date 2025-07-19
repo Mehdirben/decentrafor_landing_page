@@ -107,38 +107,14 @@ function initializeSmoothScrolling() {
     });
 }
 
-// Parallax effects
+// Parallax effects (disabled for hero)
 function initializeParallaxEffects() {
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroVisual = document.querySelector('.hero-visual');
-        
-        if (heroVisual) {
-            const rate = scrolled * -0.5;
-            heroVisual.style.transform = `translateY(${rate}px)`;
-        }
-    });
+    // Parallax effects removed from hero section
 }
 
-// Typing effect for hero title
+// Typing effect for hero title (disabled)
 function initializeTypingEffect() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
-    
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    
-    let index = 0;
-    function typeText() {
-        if (index < text.length) {
-            heroTitle.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeText, 50);
-        }
-    }
-    
-    // Start typing effect after a short delay
-    setTimeout(typeText, 1000);
+    // Typing effect removed from hero title
 }
 
 // CTA Button interactions
@@ -183,24 +159,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Hero cards animation
+// Hero cards animation (disabled)
 function animateHeroCards() {
-    const heroCards = document.querySelectorAll('.hero-card');
-    
-    heroCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, 1500 + (index * 200));
-    });
+    // Hero card animations removed
 }
 
-// Initialize hero cards animation
-document.addEventListener('DOMContentLoaded', animateHeroCards);
+// Initialize hero cards animation (disabled)
+// document.addEventListener('DOMContentLoaded', animateHeroCards);
 
 // Roadmap progress animation
 function animateRoadmapProgress() {
