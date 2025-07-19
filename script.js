@@ -343,8 +343,104 @@ function initializeLazyLoading() {
 // Initialize lazy loading
 document.addEventListener('DOMContentLoaded', initializeLazyLoading);
 
-// Add CSS for ripple effect
+// Mobile-specific enhancements
+function initializeMobileEnhancements() {
+    // Prevent zoom on input focus (iOS)
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+    }
+    
+    // Add touch event handling for better mobile interaction
+    const cards = document.querySelectorAll('.feature-card, .tech-card, .hero-card');
+    cards.forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+        
+        card.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Improve mobile menu accessibility
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.setAttribute('aria-label', 'Toggle navigation menu');
+        navToggle.setAttribute('aria-expanded', 'false');
+        
+        navToggle.addEventListener('click', function() {
+            const isExpanded = navMenu.classList.contains('active');
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+    
+    // Handle orientation changes
+    window.addEventListener('orientationchange', function() {
+        setTimeout(() => {
+            window.scrollTo(0, window.scrollY);
+        }, 100);
+    });
+    
+    // Optimize scroll performance on mobile
+    let ticking = false;
+    function updateScrollEffects() {
+        // Your scroll effects here
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollEffects);
+            ticking = true;
+        }
+    });
+}
+
+// Enhanced mobile navigation
+function enhanceMobileNavigation() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
+    
+    if (!navToggle || !navMenu) return;
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            body.style.overflow = '';
+        }
+    });
+    
+    // Prevent body scroll when menu is open
+    navToggle.addEventListener('click', function() {
+        if (navMenu.classList.contains('active')) {
+            body.style.overflow = '';
+        } else {
+            body.style.overflow = 'hidden';
+        }
+    });
+    
+    // Close menu when link is clicked
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            body.style.overflow = '';
+        });
+    });
+}
+
+// Add CSS for mobile enhancements
 document.addEventListener('DOMContentLoaded', function() {
+    initializeMobileEnhancements();
+    enhanceMobileNavigation();
+    
     const style = document.createElement('style');
     style.textContent = `
         .ripple {
@@ -363,18 +459,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        .nav-menu.active {
-            display: flex;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            flex-direction: column;
-            padding: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-        
         .nav-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
@@ -391,10 +475,78 @@ document.addEventListener('DOMContentLoaded', function() {
             color: #6366f1;
         }
         
+        /* Mobile-specific improvements */
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
+            /* Smooth transitions for mobile interactions */
+            .feature-card,
+            .tech-card,
+            .hero-card {
+                transition: transform 0.2s ease;
             }
+            
+            /* Better touch targets */
+            .nav-link {
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Prevent text selection on touch */
+            .nav-toggle,
+            .btn {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            /* Improve button accessibility */
+            .btn:active {
+                transform: scale(0.98);
+            }
+            
+            /* Better focus indicators for mobile */
+            .nav-link:focus,
+            .btn:focus {
+                outline: 3px solid #6366f1;
+                outline-offset: 2px;
+            }
+        }
+        
+        /* Loading states for better UX */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        
+        /* Skeleton loading for images */
+        img {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        img[src] {
+            background: none;
+            animation: none;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Improve mobile performance */
+        .hero-visual,
+        .feature-card,
+        .tech-card {
+            will-change: transform;
+        }
+        
+        /* Better mobile scrolling */
+        body {
+            -webkit-overflow-scrolling: touch;
         }
     `;
     document.head.appendChild(style);
