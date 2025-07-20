@@ -382,7 +382,8 @@ body {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    max-width: 450px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .video-wrapper:hover {
@@ -394,8 +395,8 @@ body {
     height: auto;
     display: block;
     border-radius: 15px;
-    max-height: 300px;
-    object-fit: cover;
+    max-height: 500px;
+    object-fit: contain;
 }
 
 .demo-features {
@@ -914,12 +915,13 @@ body {
     }
 
     .video-wrapper {
-        max-width: 100%;
+        max-width: 250px;
         margin: 0 auto;
     }
 
     .video-wrapper video {
-        max-height: 250px;
+        max-height: 400px;
+        object-fit: contain;
     }
 
     .demo-features h3 {
