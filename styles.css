@@ -352,6 +352,87 @@ body {
     font-size: 0.9rem;
 }
 
+/* Demo Section */
+.demo {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.demo .section-header h2,
+.demo .section-header p {
+    color: white;
+    text-align: center;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    max-width: 450px;
+}
+
+.video-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.demo-features {
+    padding: 20px;
+}
+
+.demo-features h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #f8fafc;
+}
+
+.demo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.demo-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    transition: color 0.3s ease;
+}
+
+.demo-list li:hover {
+    color: #ffffff;
+}
+
+.demo-list i {
+    color: #fbbf24;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
 /* Roadmap Section */
 .roadmap {
     padding: 100px 0;
@@ -818,6 +899,38 @@ body {
     .feature-list li {
         font-size: 0.9rem;
         margin-bottom: 8px;
+    }
+
+    /* Demo Section Mobile */
+    .demo {
+        padding: 60px 0;
+    }
+
+    .demo-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .video-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .video-wrapper video {
+        max-height: 250px;
+    }
+
+    .demo-features h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .demo-list li {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        justify-content: center;
     }
 
     /* Roadmap Section Mobile */
